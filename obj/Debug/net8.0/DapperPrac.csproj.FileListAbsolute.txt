@@ -80,3 +80,4 @@ D:\Dados\Documents\Estudo\testes-tec\DapperPrac\obj\Debug\net8.0\refint\DapperPr
 D:\Dados\Documents\Estudo\testes-tec\DapperPrac\obj\Debug\net8.0\DapperPrac.pdb
 D:\Dados\Documents\Estudo\testes-tec\DapperPrac\obj\Debug\net8.0\DapperPrac.genruntimeconfig.cache
 D:\Dados\Documents\Estudo\testes-tec\DapperPrac\obj\Debug\net8.0\ref\DapperPrac.dll
+D:\Dados\Documents\Estudo\testes-tec\DapperPrac\obj\Debug\net8.0\DapperPrac.sourcelink.json

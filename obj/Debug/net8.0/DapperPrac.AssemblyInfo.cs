@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DapperPrac")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a218dd9ae5a7eaabe3b0a49a07cadf008cd7eae8")]
 [assembly: System.Reflection.AssemblyProductAttribute("DapperPrac")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DapperPrac")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

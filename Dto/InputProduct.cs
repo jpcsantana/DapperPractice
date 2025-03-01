@@ -1,6 +1,6 @@
 namespace DapperPrac.Dto
 {
-    public record CreateProduct
+    public record InputProduct
     {
         
         public required string ProductName { get; init;}

@@ -31,12 +31,27 @@ namespace DapperPrac.Service
             return await _connection.QueryFirstOrDefaultAsync<Product>("SELECT * FROM Products WHERE Id=@ProductId", new { ProductId = productId});
         }
 
-        public async Task<bool> CreateProductAsync(CreateProduct product)
+        public async Task<bool> CreateProductAsync(InputProduct product)
         {
             int rowsAffected = await _connection.ExecuteAsync("INSERT INTO Products(ProductName, Price, IndustryId) " +
             "VALUES(@ProductName, @Price, @IndustryId)", product);
 
             return rowsAffected != 0;
+        }
+        public async Task<bool> UpdateProductAsync(int id, InputProduct product)
+        {
+            int rowsAffected = await _connection.ExecuteAsync("UPDATE Products SET ProductName=@ProductName, Price=@Price, IndustryId=@IndustryId WHERE Id=@ProductId",
+             new { product.ProductName, product.Price, product.IndustryId, ProductId = id});
+
+            return rowsAffected != 0;
+        }
+
+        public async Task<bool> DeleteProductAsync(int id)
+        {
+            int rowsAffected = await _connection.ExecuteAsync("DELETE FROM Products WHERE Id=@Id", new {Id = id});
+
+            return rowsAffected != 0;
+
         }
     }
 }

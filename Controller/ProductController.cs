@@ -31,9 +31,19 @@ namespace DapperPrac.Controller
             return Ok(await _service.GetProductByIdAsync(id));
         }
         [HttpPost]
-        public async Task<IActionResult> CreateProduct([FromBody] CreateProduct product)
+        public async Task<IActionResult> CreateProduct([FromBody] InputProduct product)
         {
-            return await _service.CreateProductAsync(product) ? Ok("Product successfully created.") : BadRequest("Something went wrong.");
+            return await _service.CreateProductAsync(product) ? CreatedAtAction(nameof(CreateProduct), "Product successfully created.") : BadRequest("Something went wrong.");
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProduct(int id, [FromBody] InputProduct product)
+        {
+            return await _service.UpdateProductAsync(id, product) ? Ok("Product successfully updated.") : BadRequest("Something went wrong.");
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            return await _service.DeleteProductAsync(id) ? NoContent() : BadRequest("Something went wrong.");
         }
     }
 }
